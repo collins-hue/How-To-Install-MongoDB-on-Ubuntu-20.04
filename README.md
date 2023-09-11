@@ -3,11 +3,11 @@
 MongoDB is a document database used in many modern web applications. It is classified as a NoSQL database because it does not rely on a traditional table-based relational database structure.
 Instead, it uses JSON-like documents with dynamic schemas, meaning that, unlike relational databases, MongoDB does not require a predefined schema before you add data to a database. You can alter the schema at any time and as often as is necessary without having to set up a new database with an updated schema.
 
-#Prerequisites
+##Prerequisites
 
 1. One Ubuntu 20.04 server.
 
-#Step 1 — Installing MongoDB
+##Step 1 — Installing MongoDB
 
 Ubuntu’s official package repositories include a stable version of MongoDB. However, as of this writing, the version of MongoDB available from the default Ubuntu repositories is 3.6, while the latest stable release is 4.4.
 To start, import the public GPG key for the latest stable version of MongoDB by running the following command. If you intend to use a version of MongoDB other than 4.4, be sure to change 4.4 in the URL portion of this command to align with the version you want to install:
@@ -52,7 +52,7 @@ Following that, you can install MongoDB:
 
 When prompted, press Y and then ENTER to confirm that you want to install the package.
 
-#Step 2 — Starting the MongoDB Service and Testing the Database
+##Step 2 — Starting the MongoDB Service and Testing the Database
 
 Run the following systemctl command to start the MongoDB service:
    ```
@@ -103,7 +103,7 @@ connectionStatus will check and return the status of the database connection. A 
 
 Also, note that the database is running on port 27017 on 127.0.0.1, the local loopback address representing localhost. This is MongoDB’s default port number.
 
-#Step 3 — Managing the MongoDB Service
+##Step 3 — Managing the MongoDB Service
 
 As mentioned previously, the systemctl status command checks the status of the MongoDB service:
    ```
@@ -129,13 +129,13 @@ Then to re-enable it to start up at boot, run the enable command again:
    sudo systemctl enable mongod
    ```
 
-#Conclusion
+##Conclusion
 
 In this tutorial, you added the official MongoDB repository to your APT instance, and installed the latest version of MongoDB. You then tested Mongo’s functionality and practiced some systemctl commands.
 
 As an immediate next step, we strongly recommend that you harden your MongoDB installation’s security by following our guide on How To Secure MongoDB on Ubuntu 20.04. Once it’s secured, you could then configure MongoDB to accept remote connections.
 
-#Reference
+##Reference
 
 1. https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-20-04
 
